@@ -1,0 +1,36 @@
+Before the setup function, add these lines:
+
+int btn1 = 1;  // The button state
+boolean pushed = false; // True when the button is pushed
+int whenPushed = 0;  // The time in milliseconds from when the button is pushed.
+
+
+In the loop function, add these lines:
+
+  // Read the pushbutton state. 1 for not pushed, 0 for pushed.
+  btn1 = digitalRead(PUSH1);
+  
+  if (btn1 == 0 && !pushed) {
+    // If pushed, then store the time
+    pushed = true;
+    whenPushed = millis();
+  } else if (btn1 == 1 && pushed) {
+    // Reset pushed
+    pushed = false;
+    
+    // Released. Calculate the time elapsed
+    double seconds = (millis() - whenPushed) / 1000.0;
+    Serial.print("Seconds pushed: ");
+    Serial.println(seconds);
+    
+    // Send to M2X
+    int response = m2xClient.updateStreamValue(deviceId, streamName, seconds);
+    Serial.print("M2X client response code: ");
+    Serial.println(response);
+
+    // If the response is an error, then send into infinite loop to stop loop
+    if (response == -1) {
+      Serial.println("Error occurred");
+      while (1);
+    }
+  }

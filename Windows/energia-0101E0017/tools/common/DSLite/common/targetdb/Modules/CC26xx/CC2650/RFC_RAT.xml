@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="RFC_RAT" HW_revision="" XML_version="1.0" description="Component for rat register bank" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="setup_parser.xsd">
+   <register acronym="RATCNT" width="32" description="Radio Timer Counter Value" id="RATCNT" offset="0x4">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RW" description="Counter value. This is not writable while radio timer counter is enabled." id="CNT" resetval="0x0">
+      </bitfield>
+   </register>
+</module>

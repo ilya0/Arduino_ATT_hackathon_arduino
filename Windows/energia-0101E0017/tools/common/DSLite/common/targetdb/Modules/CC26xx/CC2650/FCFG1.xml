@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module id="FCFG1" HW_revision="" XML_version="1.0" description="Factory configuration area (FCFG1)" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="setup_parser.xsd">
+   <register acronym="MISC_CONF_1" width="32" description="Misc configurations" id="MISC_CONF_1" offset="0xa0">
+      <bitfield range="" begin="31" width="24" end="8" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xffffff">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="HW minor revision number (a value of 0xFF is treated equally to 0x00).
+Value may change without warning." id="DEVICE_MINOR_REV" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV5" width="32" description="Configuration of RF Frontend in Divide-by-5 Mode
+Divide-by-5 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV5" offset="0xc4">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV6" width="32" description="Configuration of RF Frontend in Divide-by-6 Mode
+Divide-by-6 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV6" offset="0xc8">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV10" width="32" description="Configuration of RF Frontend in Divide-by-10 Mode
+Divide-by-10 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV10" offset="0xcc">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV12" width="32" description="Configuration of RF Frontend in Divide-by-12 Mode
+Divide-by-12 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV12" offset="0xd0">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV15" width="32" description="Configuration of RF Frontend in Divide-by-15 Mode
+Divide-by-15 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV15" offset="0xd4">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND_DIV30" width="32" description="Configuration of RF Frontend in Divide-by-30 Mode
+Divide-by-30 mode is only available for CC13xx.
+" id="CONFIG_RF_FRONTEND_DIV30" offset="0xd8">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value used for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LNA_IB" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="IFAMP_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="CTL_PA0_TRIM" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="13" width="7" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFLDO_TRIM_OUTPUT" resetval="0x7f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV5" width="32" description="Configuration of Synthesizer in Divide-by-5 Mode
+Divide-by-5 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV5" offset="0xdc">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV6" width="32" description="Configuration of Synthesizer in Divide-by-6 Mode
+Divide-by-6 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV6" offset="0xe0">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV10" width="32" description="Configuration of Synthesizer in Divide-by-10 Mode
+Divide-by-10 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV10" offset="0xe4">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV12" width="32" description="Configuration of Synthesizer in Divide-by-12 Mode
+Divide-by-12 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV12" offset="0xe8">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV15" width="32" description="Configuration of Synthesizer in Divide-by-15 Mode
+Divide-by-15 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV15" offset="0xec">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH_DIV30" width="32" description="Configuration of Synthesizer in Divide-by-30 Mode
+Divide-by-30 mode is only available for CC13xx.
+" id="CONFIG_SYNTH_DIV30" offset="0xf0">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="LDOVCO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="SLDO_TRIM_OUTPUT" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV5" width="32" description="Configuration of IFADC in Divide-by-5 Mode
+Divide-by-5 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV5" offset="0xf4">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV6" width="32" description="Configuration of IFADC in Divide-by-6 Mode
+Divide-by-6 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV6" offset="0xf8">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV10" width="32" description="Configuration of IFADC in Divide-by-10 Mode
+Divide-by-10 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV10" offset="0xfc">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV12" width="32" description="Configuration of IFADC in Divide-by-12 Mode
+Divide-by-12 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV12" offset="0x100">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV15" width="32" description="Configuration of IFADC in Divide-by-15 Mode
+Divide-by-15 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV15" offset="0x104">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC_DIV30" width="32" description="Configuration of IFADC in Divide-by-30 Mode
+Divide-by-30 mode is only available for CC13xx.
+" id="CONFIG_MISC_ADC_DIV30" offset="0x108">
+      <bitfield range="" begin="31" width="15" end="17" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7fff">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="RSSI_OFFSET" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="QUANTCTLTHRES" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization.
+" id="DACTRIM" resetval="0x3f">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_DIE_ID_0" width="32" description="Shadow of EFUSE:DIE_ID_0" id="SHDW_DIE_ID_0" offset="0x118">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Shadow of EFUSE:DIE_ID_0, ie efuse row number 3" id="ID_31_0" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_DIE_ID_1" width="32" description="Shadow of EFUSE:DIE_ID_1" id="SHDW_DIE_ID_1" offset="0x11c">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Shadow of EFUSE:DIE_ID_1, ie efuse row number 4" id="ID_63_32" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_DIE_ID_2" width="32" description="Shadow of EFUSE:DIE_ID_2" id="SHDW_DIE_ID_2" offset="0x120">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Shadow of EFUSE:DIE_ID_2, ie efuse row number 5" id="ID_95_64" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_DIE_ID_3" width="32" description="Shadow of EFUSE:DIE_ID_3" id="SHDW_DIE_ID_3" offset="0x124">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Shadow of EFUSE:DIE_ID_3, ie efuse row number 6" id="ID_127_96" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_OSC_BIAS_LDO_TRIM" width="32" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM" id="SHDW_OSC_BIAS_LDO_TRIM" offset="0x138">
+      <bitfield range="" begin="31" width="3" end="29" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="28" width="2" end="27" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.SET_RCOSC_HF_COARSE_RESISTOR, ie in efuse row number 11" id="SET_RCOSC_HF_COARSE_RESISTOR" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="26" width="4" end="23" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.TRIMMAG, ie in efuse row number 11" id="TRIMMAG" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="22" width="5" end="18" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.TRIMIREF, ie in efuse row number 11" id="TRIMIREF" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="17" width="2" end="16" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.ITRIM_DIG_LDO, ie in efuse row number 11" id="ITRIM_DIG_LDO" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.VTRIM_DIG, ie in efuse row number 11" id="VTRIM_DIG" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="11" width="4" end="8" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.VTRIM_COARSE, ie in efuse row number 11" id="VTRIM_COARSE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Shadow of EFUSE:OSC_BIAS_LDO_TRIM.RCOSCHF_CTRIM, ie in efuse row number 11" id="RCOSCHF_CTRIM" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SHDW_ANA_TRIM" width="32" description="Shadow of EFUSE:ANA_TRIM" id="SHDW_ANA_TRIM" offset="0x13c">
+      <bitfield range="" begin="31" width="5" end="27" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="26" width="2" end="25" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.BOD_BANDGAP_TRIM_CNF, ie in efuse row number 12" id="BOD_BANDGAP_TRIM_CNF" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="24" width="1" end="24" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.VDDR_ENABLE_PG1, ie in efuse row number 12" id="VDDR_ENABLE_PG1" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="1" end="23" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.VDDR_OK_HYS, ie in efuse row number 12" id="VDDR_OK_HYS" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="22" width="2" end="21" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.IPTAT_TRIM, ie in efuse row number 12" id="IPTAT_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="20" width="5" end="16" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.VDDR_TRIM, ie in efuse row number 12" id="VDDR_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="5" end="11" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.TRIMBOD_INTMODE, ie in efuse row number 12" id="TRIMBOD_INTMODE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="10" width="5" end="6" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.TRIMBOD_EXTMODE, ie in efuse row number 12" id="TRIMBOD_EXTMODE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Shadow of EFUSE:ANA_TRIM.TRIMTEMP, ie in efuse row number 12" id="TRIMTEMP" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_NUMBER" width="32" description="" id="FLASH_NUMBER" offset="0x164">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Number of the manufacturing lot that produced this unit." id="LOT_NUMBER" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_COORDINATE" width="32" description="" id="FLASH_COORDINATE" offset="0x16c">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="X coordinate of this unit on the wafer." id="XCOORDINATE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="Y coordinate of this unit on the wafer." id="YCOORDINATE" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_E_P" width="32" description="Flash Erase and Program Setup Time" id="FLASH_E_P" offset="0x170">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Program setup time in cycles. Value will be written to FLASH:FSM_PE_OSU.PGM_OSU by the flash device driver when an erase/program operation is initiated." id="PSU" resetval="0x17">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Erase setup time in cycles. Value will be written to FLASH:FSM_PE_OSU.ERA_OSU by the flash device driver when an erase/program operation is initiated." id="ESU" resetval="0x33">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Program verify setup time in cycles. Value will be written to FLASH:FSM_PE_VSU.PGM_VSU by the flash device driver when an erase/program operation is initiated." id="PVSU" resetval="0x1a">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Erase verify setup time in cycles. Value will be written to FLASH:FSM_PE_VSU.ERA_VSU by the flash device driver when an erase/program operation is initiated." id="EVSU" resetval="0x33">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_C_E_P_R" width="32" description="Flash Compaction, Execute, Program and Read" id="FLASH_C_E_P_R" offset="0x174">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Repeat verify setup time in cycles. Used for repeated verifies during program and erase. Value will be written to FLASH:FSM_EX_VAL.REP_VSU by the flash device driver when an erase/program operation is initiated." id="RVSU" resetval="0xa">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Program verify EXECUTEZ-&#62;data valid time in half-microseconds. Value will be converted to number of FCLK cycles by by flash device driver and the converted value is written to FLASH:FSM_EX_VAL.EXE_VALD when an erase/program operation is initiated.." id="PV_ACCESS" resetval="0xa">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Address-&#62;EXECUTEZ setup time in cycles. Value will be written to FLASH:FSM_CMP_VSU.ADD_EXZ by the flash device driver when an erase/program operation is initiated.." id="A_EXEZ_SETUP" resetval="0x2">
+      </bitfield>
+      <bitfield range="" begin="11" width="12" end="0" rwaccess="RO" description="Compaction verify setup time in cycles." id="CVSU" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_P_R_PV" width="32" description="Flash Program, Read, and Program Verify" id="FLASH_P_R_PV" offset="0x178">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Program hold time in half-microseconds after SAFELV goes low. Value will be converted to number of FCLK cycles by the flash device driver and the converted value is written to FLASH:FSM_P_OH.PGM_OH when an erase/program operation is initiated." id="PH" resetval="0x2">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Read hold/mode transition time in cycles. Value will be written to the RD_H field bits[7:0] of the FSM_RD_H register in the flash module by the flash device driver when an erase/program operation is initiated." id="RH" resetval="0x6e">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Program verify hold time in half-microseconds after SAFELV goes low. Value will be converted to number of FCLK cycles by the flash device driver and the converted value is written to FLASH:FSM_PE_VH.PGM_VH when an erase/program operation is initiated." id="PVH" resetval="0x2">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Program verify row switch time in half-microseconds." id="PVH2" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_EH_SEQ" width="32" description="Flash Erase Hold and Sequence" id="FLASH_EH_SEQ" offset="0x17c">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Erase hold time in half-microseconds after SAFELV goes low. Value will be converted to number of FCLK cycles by the flash device driver and the converted value is written to FLASH:FSM_ERA_OH.ERA_OH when an erase/program operation is initiated." id="EH" resetval="0x2">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Pump sequence control." id="SEQ" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Max number of HCLK cycles allowed for pump brown-out. Value will be written to FLASH:FSM_VSTAT.VSTAT_CNT when an erase/program operation is initiated." id="VSTAT" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="11" width="12" end="0" rwaccess="RO" description="Max FCLK frequency allowed for program, erase, and verify reads." id="SM_FREQUENCY" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_VHV_E" width="32" description="Flash VHV Erase" id="FLASH_VHV_E" offset="0x180">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="Starting VHV-Erase CT for stairstep erase. Value will be written to FLASH:FSM_PRG_PUL.BEG_EC_LEVEL when an erase/program operation is initiated." id="VHV_E_START" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="Number of VHV CTs to step after each erase pulse (up to the max). The actual FMC register value should be one less than this since the FMC starts counting from zero. Value will be written to FLASH:FSM_EC_STEP_HEIGHT.EC_STEP_HEIGHT when an erase/program operation is initiated." id="VHV_E_STEP_HIGHT" resetval="0x1">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_PP" width="32" description="Flash Program Pulse" id="FLASH_PP" offset="0x184">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Pump read-&#62;non-read mode transition time in half-microseconds (mainly for FPES)." id="PUMP_SU" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="Max program pulse limit per program operation. Value will be written to FLASH:FSM_PRG_PUL.MAX_PRG_PUL when an erase/program operation is initiated." id="MAX_PP" resetval="0x14">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_PROG_EP" width="32" description="Flash Program and Erase Pulse" id="FLASH_PROG_EP" offset="0x188">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="Max erase pulse limit per erase operation. Value will be written to FLASH:FSM_ERA_PUL.MAX_ERA_PUL when an erase/program operation is initiated." id="MAX_EP" resetval="0xfa0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="Program pulse width in half-microseconds. Value will be converted to number of FCLK cycles by the flash device driver and the converted value is written to FLASH:FSM_PRG_PW.PROG_PUL_WIDTH when a erase/program operation is initiated." id="PROGRAM_PW" resetval="0x10">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_ERA_PW" width="32" description="Flash Erase Pulse Width" id="FLASH_ERA_PW" offset="0x18c">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="Erase pulse width in half-microseconds. Value will be converted to number of FCLK cycles by the flash device driver and the converted value is written to FLASH:FSM_ERA_PW.FSM_ERA_PW when a erase/program operation is initiated." id="ERASE_PW" resetval="0xfa0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_VHV" width="32" description="Flash VHV" id="FLASH_VHV" offset="0x190">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED3" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Value will be written to FLASH:FVHVCT2.TRIM13_P by the flash device driver when an erase/program operation is initiated." id="TRIM13_P" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="4" end="20" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED2" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="19" width="4" end="16" rwaccess="RO" description="Value will be written to FLASH:FVHVCT2.VHVCT_P by the flash device driver when an erase/program operation is initiated." id="VHV_P" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="11" width="4" end="8" rwaccess="RO" description="Value will be written to FLASH:FVHVCT1.TRIM13_E by the flash device driver when an erase/program operation is initiated. " id="TRIM13_E" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="4" end="4" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="3" width="4" end="0" rwaccess="RO" description="Value will be written to FLASH:FVHVCT1.VHVCT_E by the flash device driver when an erase/program operation is initiated" id="VHV_E" resetval="0x4">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_VHV_PV" width="32" description="Flash VHV Program Verify" id="FLASH_VHV_PV" offset="0x194">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Value will be written to FLASH:FVHVCT1.TRIM13_PV by the flash device driver when an erase/program operation is initiated." id="TRIM13_PV" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="4" end="20" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="19" width="4" end="16" rwaccess="RO" description="Value will be written to FLASH:FVHVCT1.VHVCT_PV by the flash device driver when an erase/program operation is initiated." id="VHV_PV" resetval="0x8">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Control gate voltage during read, read margin, and erase verify. Value will be written to FLASH:FVNVCT.VCG2P5CT by the flash device driver when an erase/program operation is initiated." id="VCG2P5" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Inhibit voltage applied to unselected columns during programming." id="VINH" resetval="0x1">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_V" width="32" description="Flash Voltages" id="FLASH_V" offset="0x198">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Sourceline voltage applied to the selected block during programming. Value will be written to FLASH:FVSLP.VSL_P by the flash device driver when an erase/program operation is initiated." id="VSL_P" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Wordline voltage applied to the selected half-row during programming. Value will be written to  FLASH:FVWLCT.VWLCT_P by the flash device driver when an erase/program operation is initiated." id="VWL_P" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Wordline voltage applied to the selected block during reads and verifies. Value will be written to FLASH:FVREADCT.VREADCT by the flash device driver when an erase/program operation is initiated." id="V_READ" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="USER_ID" width="32" description="User Identification.
+Reading this register or the ICEPICK_DEVICE_ID register is the only support way of identifying a device.
+The value of this register will be written to AON_WUC:JTAGUSERCODE by boot FW while in safezone." id="USER_ID" offset="0x294">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="PG revision number:" id="PG_REV" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="27" width="2" end="26" rwaccess="RO" description="Version number.
+
+0x0: Bits [25:12] of this register has the stated meaning.
+
+Any other setting indicate a different encoding of these bits." id="VER" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="25" width="3" end="23" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED23" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="22" width="4" end="19" rwaccess="RO" description="Sequence.
+
+Used to differentiate between marketing/orderable product where other fields of USER_ID is the same (temp range, flash size, voltage range etc)" id="SEQUENCE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="18" width="3" end="16" rwaccess="RO" description="Package type.
+
+0x0: 4x4mm
+0x1: 5x5mm
+0x2: 7x7mm
+
+Others values are reserved for future use." id="PKG" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Protocols supported.
+
+0x1: BLE 
+0x2: RF4CE 
+0x4: Zigbee/6lowpan
+0x8: Proprietary
+
+More than one protocol can be supported on same device - values above are then combined." id="PROTOCOL" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="11" width="12" end="0" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_OTP_DATA3" width="32" description="Flash OTP Data 3" id="FLASH_OTP_DATA3" offset="0x2b0">
+      <bitfield range="" begin="31" width="9" end="23" rwaccess="RO" description="Value will be written to FLASH:FSM_STEP_SIZE.EC_STEP_SIZE by the flash device driver when a erase/program operation is initiated." id="EC_STEP_SIZE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="22" width="1" end="22" rwaccess="RO" description="Value will be written to FLASH:FSM_ST_MACHINE.DO_PRECOND by the flash device driver when a erase/program operation is initiated. 
+
+Note that during a Total Erase operation the flash bank will always be erased with Precondition enabled independent of the value of this FCFG1 bit field." id="DO_PRECOND" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="21" width="4" end="18" rwaccess="RO" description="Value will be written to FLASH:FSM_ERA_PUL.MAX_EC_LEVEL by the flash device driver when a erase/program operation is initiated." id="MAX_EC_LEVEL" resetval="0x4">
+      </bitfield>
+      <bitfield range="" begin="17" width="2" end="16" rwaccess="RO" description="Value will be written to FLASH:FSEQPMP.TRIM_1P7 by the flash device driver when a erase/program operation is initiated." id="TRIM_1P7" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Value will be written to FLASH:FLASH_SIZE.SECTORS by the boot FW while in safe zone. 
+
+This register will be write protected by the boot FW by setting FLASH:CFG.CONFIGURED." id="FLASH_SIZE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Value will be written to FLASH:WAIT_SYSCODE.WAIT_SYSCODE by boot FW code while in safezone. " id="WAIT_SYSCODE" resetval="0x3">
+      </bitfield>
+   </register>
+   <register acronym="ANA2_TRIM" width="32" description="Misc Analog Trim" id="ANA2_TRIM" offset="0x2b4">
+      <bitfield range="" begin="31" width="1" end="31" rwaccess="RO" description="Value will be written to  DDI_0_OSC:CTL1.RCOSCHFCTRIMFRACT_EN by boot FW while in safezone." id="RCOSCHFCTRIMFRACT_EN" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="30" width="5" end="26" rwaccess="RO" description="Value will be written to DDI_0_OSC:CTL1.RCOSCHFCTRIMFRACT by boot FW while in safezone." id="RCOSCHFCTRIMFRACT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="25" width="1" end="25" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="24" width="2" end="23" rwaccess="RO" description="Value will be written to DDI_0_OSC:ATESTCTL.SET_RCOSC_HF_FINE_RESISTOR by boot FW while in safezone." id="SET_RCOSC_HF_FINE_RESISTOR" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="22" width="1" end="22" rwaccess="RO" description="Value will be written DDI_0_OSC:ATESTCTL.ATESTLF_UDIGLDO_IBIAS_TRIM by boot FW while in safezone." id="ATESTLF_UDIGLDO_IBIAS_TRIM" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="21" width="6" end="16" rwaccess="RO" description="Value will be written to DDI_0_OSC:ADCDOUBLERNANOAMPCTL.NANOAMP_RES_TRIM by boot FW while in safezone." id="NANOAMP_RES_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="4" end="12" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="11" width="1" end="11" rwaccess="RO" description="Value will be written to ADI_3_REFSYS:DCDCCTL5.DITHER_EN by boot FW while in safezone." id="DITHER_EN" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="10" width="3" end="8" rwaccess="RO" description="Value will be written to ADI_3_REFSYS:DCDCCTL5.IPEAK by boot FW while in safezone." id="DCDC_IPEAK" resetval="0x4">
+      </bitfield>
+      <bitfield range="" begin="7" width="2" end="6" rwaccess="RO" description="Value will be written to ADI_3_REFSYS:DCDCCTL4.DEADTIME_TRIM by boot FW while in safezone." id="DEAD_TIME_TRIM" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="5" width="3" end="3" rwaccess="RO" description="Value will be written to  ADI_3_REFSYS:DCDCCTL4.LOW_EN_SEL by boot FW while in safezone." id="DCDC_LOW_EN_SEL" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="2" width="3" end="0" rwaccess="RO" description="Value will be written to  ADI_3_REFSYS:DCDCCTL4.HIGH_EN_SEL by boot FW while in safezone." id="DCDC_HIGH_EN_SEL" resetval="0x7">
+      </bitfield>
+   </register>
+   <register acronym="LDO_TRIM" width="32" description="LDO Trim" id="LDO_TRIM" offset="0x2b8">
+      <bitfield range="" begin="31" width="3" end="29" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED4" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="28" width="5" end="24" rwaccess="RO" description="Value will be written to ADI_3_REFSYS:DCDCCTL1.VDDR_TRIM_SLEEP by boot FW while in safezone." id="VDDR_TRIM_SLEEP" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED3" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="18" width="3" end="16" rwaccess="RO" description="Value will be written to ADI_3_REFSYS:DCDCCTL0.GLDO_ISRC by boot FW while in safezone." id="GLDO_CURSRC" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="3" end="13" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED2" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="12" width="2" end="11" rwaccess="RO" description="Value will be written to ADI_2_REFSYS:SOCLDOCTL3.ITRIM_DIGLDO_LOAD by boot FW while in safezone." id="ITRIM_DIGLDO_LOAD" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="10" width="3" end="8" rwaccess="RO" description="Value will be written to ADI_2_REFSYS:SOCLDOCTL3.ITRIM_UDIGLDO by boot FW while in safezone." id="ITRIM_UDIGLDO" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="5" end="3" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="2" width="3" end="0" rwaccess="RO" description="Value will be written to ADI_2_REFSYS:SOCLDOCTL2.VTRIM_DELTA by boot FW while in safezone." id="VTRIM_DELTA" resetval="0x3">
+      </bitfield>
+   </register>
+   <register acronym="MAC_BLE_0" width="32" description="MAC BLE Address 0" id="MAC_BLE_0" offset="0x2e8">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="The first 32-bits of the 64-bit MAC BLE address" id="ADDR_0_31" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="MAC_BLE_1" width="32" description="MAC BLE Address 1" id="MAC_BLE_1" offset="0x2ec">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="The last 32-bits of the 64-bit MAC BLE address" id="ADDR_32_63" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="MAC_15_4_0" width="32" description="MAC IEEE 802.15.4 Address 0" id="MAC_15_4_0" offset="0x2f0">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="The first 32-bits of the 64-bit MAC 15.4 address" id="ADDR_0_31" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="MAC_15_4_1" width="32" description="MAC IEEE 802.15.4 Address 1" id="MAC_15_4_1" offset="0x2f4">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="The last 32-bits of the 64-bit MAC 15.4 address" id="ADDR_32_63" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="FLASH_OTP_DATA4" width="32" description="Flash OTP Data 4" id="FLASH_OTP_DATA4" offset="0x308">
+      <bitfield range="" begin="31" width="1" end="31" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.STANDBY_MODE_SEL by flash device driver FW when a flash write operation is initiated." id="STANDBY_MODE_SEL_INT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="30" width="2" end="29" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.STANDBY_PW_SEL by flash device driver FW when a flash write operation is initiated." id="STANDBY_PW_SEL_INT_WRT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="28" width="1" end="28" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.DIS_STANDBY by flash device driver FW when a flash write operation is initiated." id="DIS_STANDBY_INT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="27" width="1" end="27" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.DIS_IDLE by flash device driver FW when a flash write operation is initiated." id="DIS_IDLE_INT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="26" width="3" end="24" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:FSEQPMP.VIN_AT_X by flash device driver FW when a flash write operation is initiated." id="VIN_AT_X_INT_WRT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="1" end="23" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.STANDBY_MODE_SEL by flash device driver FW when a flash write operation is initiated." id="STANDBY_MODE_SEL_EXT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="22" width="2" end="21" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.STANDBY_PW_SEL by flash device driver FW when a flash write operation is initiated." id="STANDBY_PW_SEL_EXT_WRT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="20" width="1" end="20" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.DIS_STANDBY by flash device driver FW when a flash write operation is initiated." id="DIS_STANDBY_EXT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="19" width="1" end="19" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.DIS_IDLE by flash device driver FW when a flash write operation is initiated." id="DIS_IDLE_EXT_WRT" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="18" width="3" end="16" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:FSEQPMP.VIN_AT_X by flash device driver FW when a flash write operation is initiated." id="VIN_AT_X_EXT_WRT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="1" end="15" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.STANDBY_MODE_SEL both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="STANDBY_MODE_SEL_INT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="14" width="2" end="13" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.STANDBY_PW_SEL both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="STANDBY_PW_SEL_INT_RD" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="12" width="1" end="12" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.DIS_STANDBY both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="DIS_STANDBY_INT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="11" width="1" end="11" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:CFG.DIS_IDLE both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="DIS_IDLE_INT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="10" width="3" end="8" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 0, this value will be written to FLASH:FSEQPMP.VIN_AT_X both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="VIN_AT_X_INT_RD" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="7" width="1" end="7" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.STANDBY_MODE_SEL both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="STANDBY_MODE_SEL_EXT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="6" width="2" end="5" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.STANDBY_PW_SEL both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="STANDBY_PW_SEL_EXT_RD" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="4" width="1" end="4" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.DIS_STANDBY both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="DIS_STANDBY_EXT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="3" width="1" end="3" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:CFG.DIS_IDLE both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="DIS_IDLE_EXT_RD" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="2" width="3" end="0" rwaccess="RO" description="If AON_SYSCTL:PWRCTL.EXT_REG_MODE = 1, this value will be written to FLASH:FSEQPMP.VIN_AT_X both by boot FW while in safezone, and by flash device driver FW after completion of a flash write operation. " id="VIN_AT_X_EXT_RD" resetval="0x7">
+      </bitfield>
+   </register>
+   <register acronym="MISC_TRIM" width="32" description="Miscellaneous Trim  Parameters" id="MISC_TRIM" offset="0x30c">
+      <bitfield range="" begin="31" width="24" end="8" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xffffff">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Signed byte value representing the TEMP slope with battery voltage, in degrees C / V, with four fractional bits. " id="TEMPVSLOPE" resetval="0x33">
+      </bitfield>
+   </register>
+   <register acronym="RCOSC_HF_TEMPCOMP" width="32" description="RCOSC HF Temperature Compensation" id="RCOSC_HF_TEMPCOMP" offset="0x310">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Change in FINE_RESISTOR trim" id="FINE_RESISTOR" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Change in CTRIM trim" id="CTRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Temp compensation quadratic CTRIMFRACT " id="CTRIMFRACT_QUAD" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Number of CTRIMFRACT codes per 20 degrees C from default temperature" id="CTRIMFRACT_SLOPE" resetval="0x3">
+      </bitfield>
+   </register>
+   <register acronym="TRIM_CAL_REVISION" width="32" description="Production Test Trim and Calibration Revision" id="TRIM_CAL_REVISION" offset="0x314">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="The revision of the ATE Trim&#38;Calc document used in FT1 in production" id="FT1" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="The revision of the ATE Trim&#38;Calc document used in MP1 in production" id="MP1" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="ICEPICK_DEVICE_ID" width="32" description="IcePick Device Identification
+Reading this register or the USER_ID register is the only support way of identifying a device." id="ICEPICK_DEVICE_ID" offset="0x318">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Field used to distinguish between different silicon revisions of the device." id="PG_REV" resetval="0x8">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Field used to identify silicon die. " id="WAFER_ID" resetval="0xb99a">
+      </bitfield>
+      <bitfield range="" begin="11" width="12" end="0" rwaccess="RO" description="Manufacturer code.
+
+0x02F: Texas Instruments" id="MANUFACTURER_ID" resetval="0x2f">
+      </bitfield>
+   </register>
+   <register acronym="FCFG1_REVISION" width="32" description="Factory Configuration (FCFG1) Revision" id="FCFG1_REVISION" offset="0x31c">
+      <bitfield range="" begin="31" width="32" end="0" rwaccess="RO" description="The revision number of the FCFG1 layout. This value will be read by application SW in order to determine which FCFG1 parameters that have valid values. This revision number must be incremented by 1 before any devices are to be produced if the FCFG1 layout has changed since the previous production of devices.
+Value migth change without warning." id="REV" resetval="0x23">
+      </bitfield>
+   </register>
+   <register acronym="MISC_OTP_DATA" width="32" description="Misc OTP Data" id="MISC_OTP_DATA" offset="0x320">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value that migth become into use for cc26xx PG2.2 and cc13xx PG2.0. Trim value for DDI_0_OSC:RCOSCHFCTL.RCOSCHF_ITUNE_TRIM." id="RCOSC_HF_ITUNE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="27" width="8" end="20" rwaccess="RO" description="Trim value that migth become into use for cc26xx PG2.2 and cc13xx PG2.0. Trim value for DDI_0_OSC:RCOSCHFCTL.RCOSCHF_CTRIM." id="RCOSC_HF_CRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="19" width="5" end="15" rwaccess="RO" description="Trim value for AON_WUC:OSCCFG.PER_M." id="PER_M" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="14" width="3" end="12" rwaccess="RO" description="Trim value for AON_WUC:OSCCFG.PER_E." id="PER_E" resetval="0x4">
+      </bitfield>
+      <bitfield range="" begin="11" width="4" end="8" rwaccess="RO" description="Trim value for DLO_DTX:PLLCTL1.PO_TAIL_RES_TRIM." id="PO_TAIL_RES_TRIM" resetval="0x6">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="The revision of the test program used in the production process when FCFG1 was programmed.
+Value migth change without warning." id="TEST_PROGRAM_REV" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="IOCONF" width="32" description="IO Configuration" id="IOCONF" offset="0x344">
+      <bitfield range="" begin="31" width="25" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED7" resetval="0xffffff00">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="This value is written to IOC:CFG.GPIO_CNT by boot FW while in safezone." id="GPIO_CNT" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_IF_ADC" width="32" description="Configuration of IF_ADC" id="CONFIG_IF_ADC" offset="0x34c">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCLFCFG1.FF2ADJ.
+Value is read by RF Core ROM FW during RF Core initialization." id="FF2ADJ" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCLFCFG1.FF3ADJ.
+Value is read by RF Core ROM FW during RF Core initialization." id="FF3ADJ" resetval="0x4">
+      </bitfield>
+      <bitfield range="" begin="23" width="4" end="20" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCLFCFG0.INT3ADJ.
+Value is read by RF Core ROM FW during RF Core initialization." id="INT3ADJ" resetval="0x6">
+      </bitfield>
+      <bitfield range="" begin="19" width="4" end="16" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCLFCFG0.FF1ADJ.
+Value is read by RF Core ROM FW during RF Core initialization." id="FF1ADJ" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="2" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCCTL0.AAFCAP.
+Value is read by RF Core ROM FW during RF Core initialization." id="AAFCAP" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="13" width="4" end="10" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCCTL0.INT2ADJ.
+Value is read by RF Core ROM FW during RF Core initialization." id="INT2ADJ" resetval="0xd">
+      </bitfield>
+      <bitfield range="" begin="9" width="5" end="5" rwaccess="RO" description="Trim value for ADI_0_RF:IFDLDO2.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization." id="IFDIGLDO_TRIM_OUTPUT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="4" width="5" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFALDO2.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization." id="IFANALDO_TRIM_OUTPUT" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_OSC_TOP" width="32" description="Configuration of OSC" id="CONFIG_OSC_TOP" offset="0x350">
+      <bitfield range="" begin="31" width="2" end="30" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="29" width="4" end="26" rwaccess="RO" description="Trim value for DDI_0_OSC:ANABYPASSVAL1.XOSC_HF_ROW_Q12." id="XOSC_HF_ROW_Q12" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="25" width="16" end="10" rwaccess="RO" description="Trim value for DDI_0_OSC:ANABYPASSVAL1.XOSC_HF_COLUMN_Q12." id="XOSC_HF_COLUMN_Q12" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="9" width="8" end="2" rwaccess="RO" description="Trim value for DDI_0_OSC:LFOSCCTL.RCOSCLF_CTUNE_TRIM." id="RCOSCLF_CTUNE_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="1" width="2" end="0" rwaccess="RO" description="Trim value for DDI_0_OSC:LFOSCCTL.RCOSCLF_RTUNE_TRIM." id="RCOSCLF_RTUNE_TRIM" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_RF_FRONTEND" width="32" description="Configuration of RF Frontend in Divide-by-2 Mode" id="CONFIG_RF_FRONTEND" offset="0x354">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL3.IB.
+Value is read by RF Core ROM FW during RF Core initialization." id="IFAMP_IB" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="27" width="4" end="24" rwaccess="RO" description="Trim value for ADI_0_RF:LNACTL2.IB.
+Value is read by RF Core ROM FW during RF Core initialization." id="LNA_IB" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="5" end="19" rwaccess="RO" description="Trim value for ADI_0_RF:IFAMPCTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization." id="IFAMP_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="18" width="5" end="14" rwaccess="RO" description="Trim value for ADI_0_RF:PACTL0.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization." id="CTL_PA0_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="13" width="1" end="13" rwaccess="RO" description="Status of PA trim
+0: Trimmed
+1: Not trimmed" id="PATRIMCOMPLETE_N" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="12" width="6" end="7" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="6" width="7" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:RFLDO1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization." id="RFLDO_TRIM_OUTPUT" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_SYNTH" width="32" description="Configuration of Synthesizer in Divide-by-2 Mode
+" id="CONFIG_SYNTH" offset="0x358">
+      <bitfield range="" begin="31" width="4" end="28" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0xf">
+      </bitfield>
+      <bitfield range="" begin="27" width="16" end="12" rwaccess="RO" description="Trim value for RFC_MDM:DEMIQMC0.GAINFACTOR and RFC_MDM:DEMIQMC0.PHASEFACTOR
+Value is read by RF Core ROM FW during RF Core initialization only on cc13xx." id="RFC_MDM_DEMIQMC0" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="11" width="6" end="6" rwaccess="RO" description="Trim value for ADI_1_SYNTH:VCOLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization." id="LDOVCO_TRIM_OUTPUT" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_1_SYNTH:SLDOCTL1.TRIM_OUT.
+Value is read by RF Core ROM FW during RF Core initialization." id="SLDO_TRIM_OUTPUT" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SOC_ADC_ABS_GAIN" width="32" description="AUX_ADC Gain in Absolute Reference Mode" id="SOC_ADC_ABS_GAIN" offset="0x35c">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED16" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="SOC_ADC gain in absolute reference mode at temperature 1 (30C). Calculated in production test.." id="SOC_ADC_ABS_GAIN_TEMP1" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SOC_ADC_REL_GAIN" width="32" description="AUX_ADC Gain in Relative Reference Mode" id="SOC_ADC_REL_GAIN" offset="0x360">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED16" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="SOC_ADC gain in relative reference mode at temperature 1 (30C). Calculated in production test.." id="SOC_ADC_REL_GAIN_TEMP1" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SOC_ADC_OFFSET_INT" width="32" description="AUX_ADC Temperature Offsets in Absolute Reference Mode" id="SOC_ADC_OFFSET_INT" offset="0x368">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED24" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="SOC_ADC offset in relative reference mode at temperature 1 (30C). Signed 8-bit number. Calculated in production test.." id="SOC_ADC_REL_OFFSET_TEMP1" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED8" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="SOC_ADC offset in absolute reference mode at temperature 1 (30C). Signed 8-bit number. Calculated in production test.." id="SOC_ADC_ABS_OFFSET_TEMP1" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="SOC_ADC_REF_TRIM_AND_OFFSET_EXT" width="32" description="AUX_ADC Reference Trim and Offset for External Reference Mode" id="SOC_ADC_REF_TRIM_AND_OFFSET_EXT" offset="0x36c">
+      <bitfield range="" begin="31" width="26" end="6" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED6" resetval="0xc002">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Value to write in ADI_4_AUX:ADCREF1.VTRIM at temperature 1 (30C)." id="SOC_ADC_REF_VOLTAGE_TRIM_TEMP1" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="AMPCOMP_TH1" width="32" description="Ampltude Compensation Threashold 1" id="AMPCOMP_TH1" offset="0x370">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0xff">
+      </bitfield>
+      <bitfield range="" begin="23" width="6" end="18" rwaccess="RO" description="HPM Ramp3 low amplitude threshhold. 
+In HPM_RAMP3, if amp &#62; HPMRAMP3_LTH &#38;&#38; amp &#60; HPMRAMP3_HTH then move on HPM_UPDATE." id="HPMRAMP3_LTH" resetval="0x1e">
+      </bitfield>
+      <bitfield range="" begin="17" width="2" end="16" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="15" width="6" end="10" rwaccess="RO" description="In HPM_RAMP3, if amp &#62; HPMRAMP3_LTH &#38;&#38; amp &#60; HPMRAMP3_HTH then move on to HPM_UPDATE." id="HPMRAMP3_HTH" resetval="0x20">
+      </bitfield>
+      <bitfield range="" begin="9" width="4" end="6" rwaccess="RO" description="During XOSC mode transition, CAP trim and IBIAS trim should be modified by this amount. IBIAS and CAP trim open loop count. CAP_REM is remainder of the CAP that is left to reach the final cap value." id="IBIASCAP_LPTOHP_OL_CNT" resetval="0xa">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="During XOSC mode transition, CAP trim and IBIAS trim should be modified by this amount. IBIAS and CAP trim open loop count. CAP_REM is remainder of the CAP that is left to reach the final cap value." id="HPMRAMP1_TH" resetval="0xe">
+      </bitfield>
+   </register>
+   <register acronym="AMPCOMP_TH2" width="32" description="Ampltude Compensation Threashold 2" id="AMPCOMP_TH2" offset="0x374">
+      <bitfield range="" begin="31" width="6" end="26" rwaccess="RO" description="LPM Update low amplitude threshhold. 
+if amp &#62; LPMUPDATE_LTH &#38;&#38; amp &#60; LPMUPDATE_HTH then move on." id="LPMUPDATE_LTH" resetval="0x1a">
+      </bitfield>
+      <bitfield range="" begin="25" width="2" end="24" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED3" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="23" width="6" end="18" rwaccess="RO" description="LPM Update high amplitude threshhold. 
+if amp &#62; LPMUPDATE_LTH &#38;&#38; amp &#60; LPMUPDATE_HTH then move on." id="LPMUPDATE_HTM" resetval="0x22">
+      </bitfield>
+      <bitfield range="" begin="17" width="2" end="16" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED2" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="15" width="6" end="10" rwaccess="RO" description="When ADC is forced in comparator mode, this value is used as OPAMP&#39;s threshold during LPM_UPDATE mode. Actual amplitude is compared against this threshhold to generate 1-bit adc_threshholdmet indicator output." id="ADC_COMP_AMPTH_LPM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="9" width="2" end="8" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="7" width="6" end="2" rwaccess="RO" description="When ADC is forced in comparator mode, this value is used as OPAMP&#39;s threshold during HPM_UPDATE mode. Actual amplitude is compared against this threshhold to generate 1-bit adc_threshholdmet indicator output." id="ADC_COMP_AMPTH_HPM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="1" width="2" end="0" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x3">
+      </bitfield>
+   </register>
+   <register acronym="AMPCOMP_CTRL1" width="32" description="Amplitude Compensation Control" id="AMPCOMP_CTRL1" offset="0x378">
+      <bitfield range="" begin="31" width="1" end="31" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="30" width="1" end="30" rwaccess="RO" description="Trim value for DDI_0_OSC:AMPCOMPCTL.AMPCOMP_REQ_MODE." id="AMPCOMP_REQ_MODE" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="29" width="6" end="24" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="23" width="4" end="20" rwaccess="RO" description="Offset values of XOSC IBIAS trim. IBIAS trim value would always be greater than or equal to this offset in both HPM and LPM." id="IBIAS_OFFSET" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="19" width="4" end="16" rwaccess="RO" description="Initial value of XOSC IBIAS trim. During ramping up, IBIAS is set to IBIAS_OFFSET + IBIAS_INIT." id="IBIAS_INIT" resetval="0x8">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="FSM waits for ddi_lpm_ibias_wait_cnt_final clock cycles in IDAC_DECREMENT_WITH_MEASURE states in order to compensate slow response of the xtal. 8-bits." id="LPM_IBIAS_WAIT_CNT_FINAL" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="7" width="4" end="4" rwaccess="RO" description="Step size of XOSC CAP trim (both Q1 and Q2) during XOSC mode transition. Can vary from 6 to 12. Other values are possible but not valid." id="CAP_STEP" resetval="0x4">
+      </bitfield>
+      <bitfield range="" begin="3" width="4" end="0" rwaccess="RO" description="During HPM to LPM transition, CAP trim and IBIAS trim should be modified by this amount. IBIAS and CAP trim open loop count. CAP_REM is remainder of the CAP that is left to reach the final cap value. Do not need to program this. 
+CAP_TRIM = CAP_INIT - CAP_STEP*IBIASCAP_HPTOLP_OL_CNT - CAP_REM;
+IBIAS_TRIM = IBIAS_INIT - 1*IBIASCAP_HPTOLP_OL_CNT;
+Here, cap_init is decimal conversion of cap_init_col and cap_init_row." id="IBIASCAP_HPTOLP_OL_CNT" resetval="0x7">
+      </bitfield>
+   </register>
+   <register acronym="ANABYPASS_VALUE2" width="32" description="Analog Bypass Value for OSC" id="ANABYPASS_VALUE2" offset="0x37c">
+      <bitfield range="" begin="31" width="18" end="14" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x3ffff">
+      </bitfield>
+      <bitfield range="" begin="13" width="14" end="0" rwaccess="RO" description="Value of xosc_hf_ibiastherm when oscdig is bypassed.
+" id="XOSC_HF_IBIASTHERM" resetval="0x3ff">
+      </bitfield>
+   </register>
+   <register acronym="CONFIG_MISC_ADC" width="32" description="Configuration of IFADC in Divide-by-2 Mode" id="CONFIG_MISC_ADC" offset="0x380">
+      <bitfield range="" begin="31" width="14" end="18" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x3fff">
+      </bitfield>
+      <bitfield range="" begin="17" width="1" end="17" rwaccess="RO" description="Status of RSSI trim
+0: Trimmed
+1: Not trimmed" id="RSSITRIMCOMPLETE_N" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="16" width="8" end="9" rwaccess="RO" description="Value for RSSI measured in production test.
+Value is read by RF Core ROM FW during RF Core initialization." id="RSSI_OFFSET" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="8" width="3" end="6" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCQUANT0.TH.
+Value is read by RF Core ROM FW during RF Core initialization." id="QUANTCTLTHRES" resetval="0x5">
+      </bitfield>
+      <bitfield range="" begin="5" width="6" end="0" rwaccess="RO" description="Trim value for ADI_0_RF:IFADCDAC.TRIM.
+Value is read by RF Core ROM FW during RF Core initialization." id="DACTRIM" resetval="0xd">
+      </bitfield>
+   </register>
+   <register acronym="VOLT_TRIM" width="32" description="Voltage Trim" id="VOLT_TRIM" offset="0x388">
+      <bitfield range="" begin="31" width="3" end="29" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED3" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="28" width="5" end="24" rwaccess="RO" description="Trim value for 1.94V VDDR found in production test (for CC13xx high PA output power only)." id="VDDR_TRIM_HH" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="23" width="3" end="21" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED2" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="20" width="5" end="16" rwaccess="RO" description="Trim value for 1.85V VDDR found in production test (for external VDDR load mode)" id="VDDR_TRIM_H" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="15" width="3" end="13" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED1" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="12" width="5" end="8" rwaccess="RO" description="Trim value for 1.75V VDDR recharge target found in production test (for external VDDR load mode)." id="VDDR_TRIM_SLEEP_H" resetval="0x1f">
+      </bitfield>
+      <bitfield range="" begin="7" width="3" end="5" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="4" width="5" end="0" rwaccess="RO" description="Trim value for 2.0V VDDS BOD target found in production test." id="TRIMBOD_H" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="OSC_CONF" width="32" description="OSC Configuration" id="OSC_CONF" offset="0x38c">
+      <bitfield range="" begin="31" width="2" end="30" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x3">
+      </bitfield>
+      <bitfield range="" begin="29" width="1" end="29" rwaccess="RO" description="Trim value for DDI_0_OSC:ADCDOUBLERNANOAMPCTL.ADC_SH_VBUF_EN." id="ADC_SH_VBUF_EN" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="28" width="1" end="28" rwaccess="RO" description="Trim value for DDI_0_OSC:ADCDOUBLERNANOAMPCTL.ADC_SH_MODE_EN." id="ADC_SH_MODE_EN" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="27" width="1" end="27" rwaccess="RO" description="Trim value for DDI_0_OSC:ATESTCTL.ATESTLF_RCOSCLF_IBIAS_TRIM." id="ATESTLF_RCOSCLF_IBIAS_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="26" width="2" end="25" rwaccess="RO" description="Trim value for DDI_0_OSC:LFOSCCTL.XOSCLF_REGULATOR_TRIM." id="XOSCLF_REGULATOR_TRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="24" width="4" end="21" rwaccess="RO" description="Trim value for DDI_0_OSC:LFOSCCTL.XOSCLF_CMIRRWR_RATIO." id="XOSCLF_CMIRRWR_RATIO" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="20" width="2" end="19" rwaccess="RO" description="Trim value for DDI_0_OSC:CTL1.XOSC_HF_FAST_START.
+This trim value is not relevant for PG1 devices." id="XOSC_HF_FAST_START" resetval="0x1">
+      </bitfield>
+      <bitfield range="" begin="18" width="1" end="18" rwaccess="RO" description="0: XOSC_HF unavailable (may not be bonded out)
+1: XOSC_HF available (default)" id="XOSC_OPTION" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="17" width="18" end="0" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED0" resetval="0x0">
+      </bitfield>
+   </register>
+   <register acronym="CAP_TRIM" width="32" description="Capasitor Trim" id="CAP_TRIM" offset="0x394">
+      <bitfield range="" begin="31" width="16" end="16" rwaccess="RO" description="Reserved storage of measurement value on 0.28um pitch FLUX CAP (measured in production test)" id="FLUX_CAP_0P28_TRIM" resetval="0xffff">
+      </bitfield>
+      <bitfield range="" begin="15" width="16" end="0" rwaccess="RO" description="Reserved storage of measurement value on 0.4um pitch FLUX CAP (measured in production test)" id="FLUX_CAP_0P4_TRIM" resetval="0xffff">
+      </bitfield>
+   </register>
+   <register acronym="MISC_OTP_DATA_1" width="32" description="Misc OSC Control" id="MISC_OTP_DATA_1" offset="0x398">
+      <bitfield range="" begin="31" width="3" end="29" rwaccess="RO" description="Software should not rely on the value of a reserved. Writing any other value than the reset value may result in undefined behavior." id="RESERVED" resetval="0x7">
+      </bitfield>
+      <bitfield range="" begin="28" width="2" end="27" rwaccess="RO" description="Trim value for DDI_0_OSC:XOSCHFCTL.PEAK_DET_ITRIM." id="PEAK_DET_ITRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="26" width="3" end="24" rwaccess="RO" description="Trim value for DDI_0_OSC:XOSCHFCTL.HP_BUF_ITRIM." id="HP_BUF_ITRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="23" width="2" end="22" rwaccess="RO" description="Trim value for DDI_0_OSC:XOSCHFCTL.LP_BUF_ITRIM." id="LP_BUF_ITRIM" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="21" width="2" end="20" rwaccess="RO" description="Trim value for DDI_0_OSC:ADCDOUBLERNANOAMPCTL.DBLR_LOOP_FILTER_RESET_VOLTAGE." id="DBLR_LOOP_FILTER_RESET_VOLTAGE" resetval="0x0">
+      </bitfield>
+      <bitfield range="" begin="19" width="10" end="10" rwaccess="RO" description="Trim value for DDI_0_OSC:RADCEXTCFG.HPM_IBIAS_WAIT_CNT." id="HPM_IBIAS_WAIT_CNT" resetval="0x100">
+      </bitfield>
+      <bitfield range="" begin="9" width="6" end="4" rwaccess="RO" description="Trim value for DDI_0_OSC:RADCEXTCFG.LPM_IBIAS_WAIT_CNT." id="LPM_IBIAS_WAIT_CNT" resetval="0x3f">
+      </bitfield>
+      <bitfield range="" begin="3" width="4" end="0" rwaccess="RO" description="Trim value for DDI_0_OSC:RADCEXTCFG.IDAC_STEP." id="IDAC_STEP" resetval="0x8">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_20C" width="32" description="Power Down Current Control 20C" id="PWD_CURR_20C" offset="0x39c">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x8">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0xb">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0xa6">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x8">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_35C" width="32" description="Power Down Current Control 35C" id="PWD_CURR_35C" offset="0x3a0">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0xc">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x10">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0xa5">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0xa">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_50C" width="32" description="Power Down Current Control 50C" id="PWD_CURR_50C" offset="0x3a4">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x12">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x18">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0xa2">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0xd">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_65C" width="32" description="Power Down Current Control 65C" id="PWD_CURR_65C" offset="0x3a8">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x1c">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x25">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0x9c">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x14">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_80C" width="32" description="Power Down Current Control 80C" id="PWD_CURR_80C" offset="0x3ac">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x2e">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x3b">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0x90">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x21">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_95C" width="32" description="Power Down Current Control 95C" id="PWD_CURR_95C" offset="0x3b0">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x4c">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x62">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0x7a">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x3b">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_110C" width="32" description="Power Down Current Control 110C" id="PWD_CURR_110C" offset="0x3b4">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0x78">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0x9e">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0x70">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x6b">
+      </bitfield>
+   </register>
+   <register acronym="PWD_CURR_125C" width="32" description="Power Down Current Control 125C" id="PWD_CURR_125C" offset="0x3b8">
+      <bitfield range="" begin="31" width="8" end="24" rwaccess="RO" description="Additional maximum current, in units of 1uA, with cache retention" id="DELTA_CACHE_REF" resetval="0xad">
+      </bitfield>
+      <bitfield range="" begin="23" width="8" end="16" rwaccess="RO" description="Additional maximum current, in 1uA units, with RF memory retention" id="DELTA_RFMEM_RET" resetval="0xe1">
+      </bitfield>
+      <bitfield range="" begin="15" width="8" end="8" rwaccess="RO" description="Additional maximum current, in units of 1uA, with XOSC_HF on in low-power mode" id="DELTA_XOSC_LPM" resetval="0x80">
+      </bitfield>
+      <bitfield range="" begin="7" width="8" end="0" rwaccess="RO" description="Worst-case baseline maximum powerdown current, in units of 0.5uA" id="BASELINE" resetval="0x9a">
+      </bitfield>
+   </register>
+</module>

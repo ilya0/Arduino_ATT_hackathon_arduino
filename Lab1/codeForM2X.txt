@@ -1,0 +1,77 @@
+﻿Lab 1
+-----
+
+Send data:
+
+curl --request PUT --include --header "Content-Type: application/json" --header "X-M2X-KEY: {API-key}" --data '{"value": 0}' 'http://api-m2x.att.com/v2/devices/{device-ID}/streams/speed/value?pretty=true'
+
+
+
+
+
+WINDOWS: (pay special attention to the double-quotes and escaped double-quotes)
+
+
+
+curl --request PUT --include --header "Content-Type: application/json" --header "X-M2X-KEY: {API-key}" --data "{\"value\": 0}" 'http://api-m2x.att.com/v2/devices/{device-ID}/streams/speed/value?pretty=true'
+
+
+
+
+Retrieve data:
+
+curl --request GET --header "Content-Type: application/json" --header "X-M2X-KEY: {API-key}" 'http://api-m2x.att.com/v2/devices/{device-ID}/streams/speed/values?pretty=true'
+
+
+
+Lab 2
+-----
+
+Code to add:
+
+  // Retrieve the x, y, and z accelerometer data
+  float x = mySensor.readXData()/65.0;
+  float y = mySensor.readYData()/65.0;
+  float  z = mySensor.readZData()/65.0;
+  // Display values in serial monitor
+  Serial.print("Accel X: ");
+  Serial.print(x);
+  Serial.print(", Y: ");
+  Serial.print(y);
+  Serial.print(", Z: ");
+  Serial.println(z);
+
+  // Calculate pitch and roll. Find the maximum tilt angle.
+  float pitch = atan(x / sqrt(y * y + z * z)) * 180;
+  float roll = atan(y / sqrt(x * x + z * z)) * 180;
+  float maxTilt = max(abs(roll), abs(pitch)) / 3.14159;
+  Serial.print(" maxTilt: ");
+  Serial.println(maxTilt);
+
+
+  // If the maximum tilt is over 20 degrees, then send
+  // data to stream
+  if (maxTilt > 20) {
+    int response = m2xClient.updateStreamValue(deviceId, 
+       streamName, maxTilt);
+    Serial.print("M2x client response code: ");
+    Serial.println(response);
+
+    // Flash red LED if post is successful
+    if (response == 202) {
+      digitalWrite(RED_LED, HIGH);   // Turn the LED on 
+      delay(500);                    // Wait for a half-second
+      digitalWrite(RED_LED, LOW);
+    }
+  }
+
+
+
+Lab 3
+----
+
+Create trigger:
+
+curl --request POST --header "Content-Type: application/json" --header "X-M2X-KEY: {API-key}" --data '{ "name": "dangerous open door", "stream": "presstime", "condition": ">", "value": "10", "callback_url": "{url}", "status": "enabled" }' 'http://api-m2x.att.com/v2/devices/{device-ID}/triggers?pretty=true'
+
+

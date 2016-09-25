@@ -1,0 +1,25 @@
+{"command":"defineOption", "data":["config,c", "ccxml configuration file", true]}
+{"command":"defineOption", "data":["file,f", "elf, coff or binary file to load", true]}
+{"command":"defineOption", "data":["timeout,t", "timeout in seconds, infinite if unspecified", false]}
+{"command":"parseCommandLine"}
+{"command":"logEvent", "data":["statusMessage", "%s: %s", ["type", "message"]]}
+{"command":"logEvent", "data":["gelOutput", "GEL: %s", ["message"]]}
+{"command":"logEventIf", "data":["progress.update", "%s\n", ["name"], ["isFirstUpdate"], [true]]}
+{"command":"logEventIf", "data":["progress.update", "\t%s: %s%%\n", ["subActivity", "percent"], ["percent", "isComplete", "isFirstUpdate"], [true, false, false]]}
+{"command":"logEventIf", "data":["progress.update", "\t%s\n", ["subActivity"], ["percent", "isComplete", "isFirstUpdate"], [false, false, false]]}
+{"command":"setTimeout", "data":[@timeout@]}
+{"command":"configure","data":["@config@"]}
+{"command":"switchToCore", "data":[0]}
+{"command":"logEvent", "data":["cio.output", "%s: %s", ["type", "message"]]}
+{"command":"logMessage", "data":["Connecting...\n"]}
+{"command":"targetState.connect"}
+{"command":"expressions.evaluate","data":["DEBUG_SetBoolProperty(\"AddCEXITbreakpointAfterLoad\",1)"]}
+{"command":"expressions.evaluate","data":["DEBUG_SetBoolProperty(\"AutoRunToLabelOnRestart\",0)"]}
+{"command":"expressions.evaluate","data":["DEBUG_SetBoolProperty(\"AutoRunToLabelOnReset\",0)"]}
+{"command":"symbols.loadProgram","data":["@file@"]}
+{"command":"logMessage", "data":["Running...\n"]}
+{"command":"targetState.run","data":[false]}
+{"command":"targetState.waitForHalt"}
+{"command":"switchToDebugger"}
+{"command":"deConfigure"}
+{"command":"logMessage", "data":["Success\n"]}
